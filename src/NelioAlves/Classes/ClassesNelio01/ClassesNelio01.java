@@ -22,20 +22,17 @@ public class ClassesNelio01 {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
-        double p = (x.a + x.b + x.c) / 2;
-        double areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
-        double q = (y.a + y.b + y.c) / 2;
-        double areaY = Math.sqrt(q * (q - y.a) * (q - y.b) * (q - y.c));
+        double areaY = y.CalculoArea(y.a, y.b, y.c);
+        double areaX = x.CalculoArea(x.a, x.b, x.c);
 
-        System.out.println(areaX);
-        System.out.println(areaY);
+        System.out.println("Y : " + areaY);
+        System.out.println("X : " + areaX);
 
         if (areaX > areaY) {
-            System.out.println("Ara X E MAIOR");
+            System.out.println("AREA X E O MAIOR");
         } else if (areaX < areaY) {
-            System.out.println("Ara y e o maior");
+            System.out.println("AREA Y E O MAIOR!!");
         }
-
 
         sc.close();
     }
